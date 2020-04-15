@@ -6,7 +6,7 @@ import random
 #Autor: Krzysztof Patelka
 #Numer albumu: 117372
 #Przedmiot: Języki obiektowe 1 (Python)
-#Laboratorium nr 3 zadanie nr 1
+#Laboratorium nr 3 zadanie nr 2
 
 #Deklaracja stałych
 ILE_NA_STOS = 5
