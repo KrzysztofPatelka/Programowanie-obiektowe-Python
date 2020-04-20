@@ -1,0 +1,14 @@
+CREATE TABLE student (id integer PRIMARY KEY AUTOINCREMENT, imie text NOT NULL, nazwisko text NOT NULL);
+CREATE TABLE ocena (id integer PRIMARY KEY AUTOINCREMENT, ids integer NOT NULL, ocena integer NOT NULL, FOREIGN KEY (ids) REFERENCES student(id));
+CREATE TABLE dziennik (id integer PRIMARY KEY AUTOINCREMENT, nazwa text NOT NULL);
+CREATE TABLE dzienniki (id integer PRIMARY KEY AUTOINCREMENT, idd integer NOT NULL, ids NOT NULL, FOREIGN KEY (idd) REFERENCES dziennik(id), FOREIGN KEY (ids) REFERENCES student(id));
+INSERT INTO student (imie, nazwisko) VALUES ('Adam', 'Nowak');
+INSERT INTO student (imie, nazwisko) VALUES ('Stefan', 'Adamowicz');
+INSERT INTO ocena (ids, ocena) VALUES (1, 4);
+INSERT INTO ocena (ids, ocena) VALUES (1, 2);
+INSERT INTO ocena (ids, ocena) VALUES (1, 3);
+INSERT INTO ocena (ids, ocena) VALUES (2, 5);
+INSERT INTO dziennik (nazwa) VALUES ('Klasa 1');
+INSERT INTO dziennik (nazwa) VALUES ('Klasa 2');
+INSERT INTO dzienniki (idd, ids) VALUES (1, 1);
+INSERT INTO dzienniki (idd, ids) VALUES (2, 2);
