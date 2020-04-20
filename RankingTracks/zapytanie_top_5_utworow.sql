@@ -1,0 +1,1 @@
+SELECT TOP (5) COUNT(triplets_sample_20p.id_utworu) AS ilosc, unique_tracks.artysta, unique_tracks.tytul FROM triplets_sample_20p INNER JOIN unique_tracks ON triplets_sample_20p.id_utworu=unique_tracks.id_wykonania GROUP BY triplets_sample_20p.id_utworu, unique_tracks.artysta, unique_tracks.tytul ORDER BY ilosc DESC
