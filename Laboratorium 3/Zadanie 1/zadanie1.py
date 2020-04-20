@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 
-#Autor: Krzysztof Patelka
-#Numer albumu: 117372
-#Przedmiot: Języki obiektowe 1 (Python)
-#Laboratorium nr 3 zadanie nr 1
+# Autor: Krzysztof Patelka
+# Numer albumu: 117372
+# Przedmiot: Języki obiektowe 1 (Python)
+# Laboratorium nr 3 zadanie nr 1
 
 from functools import wraps
 
-#deklaracja stałych
+# deklaracja stałych
 ILE_LICZ_WYGENEROWAC = 10
 
-#klasa która generuje kolejne liczby Fibonacciego
+# klasa która generuje kolejne liczby Fibonacciego
 class MyFib:
 
     #deklaracja metody init
@@ -38,7 +38,7 @@ class MyFib:
             raise StopIteration
         return tmp2
 
-#implementacja kalsy jako dekoratora
+# implementacja kalsy jako dekoratora
 class MyDecorator:
 
     #deklaracja metody iter
@@ -51,13 +51,14 @@ class MyDecorator:
         self.__ile += 1
         return self.__ile
 
-#deklaracja funkcji funkcja dekorowanej dekoratorem MyDecorator
+# deklaracja funkcji funkcja dekorowanej dekoratorem MyDecorator
 @MyDecorator
 def funkcja():
     pass
 
+
 def main():
-    #cześć zadania 1a
+    # cześć zadania 1a
     print("Część zadania 1a:")
     print("Generator liczb Fibonacciego")
     print("Program generuje %d kolejnych liczb Fibonacciego" \
@@ -67,12 +68,13 @@ def main():
     for el in it:
         print(el)
 
-    #część zadania 1b
+    # część zadania 1b
     print("")
     print("Część zadania 1b:")
     for x in range(ILE_LICZ_WYGENEROWAC):
         funkcja()
     print('Funkcja została wykonana %d razy' % (funkcja._MyDecorator__ile))
+
 
 if __name__ == "__main__":
     main()
